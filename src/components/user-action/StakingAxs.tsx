@@ -14,14 +14,14 @@ import { Input } from "src/@/components/ui/input"
 import { Label } from "src/@/components/ui/label"
 import { ADDRESS_CONFIG } from "src/config/address"
 import { ERC20StakingPool__factory } from "src/contracts"
+import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useWrapToast } from "src/hooks/useWrapToast"
 import { fromFracAmount } from "src/utils/currency"
 import { debugError } from "src/utils/debug"
+import { useAccount } from "wagmi"
 
 import { LoadingSpinner } from "../LoadingSpinner"
 import { Result } from "../Result"
-import { useAccount } from "wagmi"
-import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 
 export const StakingAxs = () => {
   const { address } = useAccount()
@@ -93,7 +93,7 @@ export const StakingAxs = () => {
         </form>
       </CardContent>
       <CardFooter className="flex justify-end">
-          <Button onClick={handleStakeAxs} disabled={!address || loading} className="gap-1">
+        <Button onClick={handleStakeAxs} disabled={!address || loading} className="gap-1">
           {loading && <LoadingSpinner />}
           Send transaction
         </Button>

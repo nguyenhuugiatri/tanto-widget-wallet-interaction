@@ -17,8 +17,8 @@ const SnackBar = () => {
         theme: "dark",
       })
       setResult(JSON.stringify(data))
-    } catch (error) {
-      console.log("error", error)
+    } catch {
+      // do nothing
     }
   }
 

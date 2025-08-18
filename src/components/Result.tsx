@@ -1,8 +1,9 @@
 import Link from "next/link"
 import * as React from "react"
-import { EXPLORER_DOMAIN } from "src/contexts/WalletContext"
 
 import { Input } from "../@/components/ui/input"
+
+const EXPLORER_DOMAIN = "https://saigon-app.roninchain.com"
 
 type ResultType = "text" | "transaction_hash"
 

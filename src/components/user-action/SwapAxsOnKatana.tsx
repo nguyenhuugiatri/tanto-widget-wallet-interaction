@@ -16,13 +16,13 @@ import {
 import { Input } from "src/@/components/ui/input"
 import { ADDRESS_CONFIG } from "src/config/address"
 import { KatanaRouter__factory } from "src/contracts"
+import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useWrapToast } from "src/hooks/useWrapToast"
 import { debugError } from "src/utils/debug"
+import { useAccount } from "wagmi"
 
 import { LoadingSpinner } from "../LoadingSpinner"
 import { Result } from "../Result"
-import { useAccount } from "wagmi"
-import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 
 export const SwapAxsOnKatana = () => {
   const { address } = useAccount()

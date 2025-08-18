@@ -12,14 +12,14 @@ import {
   CardTitle,
 } from "src/@/components/ui/card"
 import { Input } from "src/@/components/ui/input"
+import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useWrapToast } from "src/hooks/useWrapToast"
 import { fromFracAmount } from "src/utils/currency"
 import { debugError } from "src/utils/debug"
+import { useAccount } from "wagmi"
 
 import { LoadingSpinner } from "../LoadingSpinner"
 import { Result } from "../Result"
-import { useAccount } from "wagmi"
-import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 
 export const TransferRon = () => {
   const { address } = useAccount()
@@ -43,8 +43,8 @@ export const TransferRon = () => {
       try {
         const rawAmount = fromFracAmount(ronAmount, 18)
         const hash = await walletProvider
-        .getSigner()
-        .sendUncheckedTransaction({ to: toAddress, value: rawAmount })
+          .getSigner()
+          .sendUncheckedTransaction({ to: toAddress, value: rawAmount })
 
         setTxHash(hash)
         setLoading(false)

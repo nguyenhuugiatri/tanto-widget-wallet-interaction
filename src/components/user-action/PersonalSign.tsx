@@ -12,12 +12,12 @@ import {
   CardTitle,
 } from "src/@/components/ui/card"
 import { Input } from "src/@/components/ui/input"
+import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useWrapToast } from "src/hooks/useWrapToast"
 import { debugError } from "src/utils/debug"
 import { Hex, parseSignature, serializeSignature, verifyMessage } from "viem"
-
-import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useAccount } from "wagmi"
+
 import { LoadingSpinner } from "../LoadingSpinner"
 import { Result } from "../Result"
 
@@ -26,7 +26,9 @@ export const PersonalSign = () => {
   const walletProvider = useEthersWeb3Provider()
   const { toastSuccess, toastError, toastConsoleError } = useWrapToast()
 
-  const [signMessage, setSignMessage] = useState<string>("Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam impedit nemo fugiat sed laudantium placeat a, in veniam laboriosam suscipit error quas nesciunt assumenda sint reprehenderit, asperiores dolorum ad?")
+  const [signMessage, setSignMessage] = useState<string>(
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam impedit nemo fugiat sed laudantium placeat a, in veniam laboriosam suscipit error quas nesciunt assumenda sint reprehenderit, asperiores dolorum ad?",
+  )
   const [signResult, setSignResult] = useState<string>()
   const [loading, setLoading] = useState<boolean>(false)
 
@@ -39,7 +41,7 @@ export const PersonalSign = () => {
     setLoading(true)
 
     try {
-      const sig = await walletProvider.getSigner().signMessage(signMessage) as Hex
+      const sig = (await walletProvider.getSigner().signMessage(signMessage)) as Hex
       const ethSig = serializeSignature(parseSignature(sig))
       const isSignatureValid = await verifyMessage({
         address,

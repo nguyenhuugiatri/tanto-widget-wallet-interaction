@@ -1,8 +1,8 @@
-import { providers } from 'ethers'
-import { useMemo } from 'react'
-import type { Account, Chain, Client, Transport } from 'viem'
-import type { Config } from 'wagmi'
-import { useConnectorClient } from 'wagmi'
+import { providers } from "ethers"
+import { useMemo } from "react"
+import type { Account, Chain, Client, Transport } from "viem"
+import type { Config } from "wagmi"
+import { useConnectorClient } from "wagmi"
 
 function clientToWeb3Provider(client: Client<Transport, Chain, Account>) {
   const { chain, transport } = client
@@ -17,8 +17,5 @@ function clientToWeb3Provider(client: Client<Transport, Chain, Account>) {
 /** Hook to convert a Viem Client to an ethers.js Web3Provider. */
 export function useEthersWeb3Provider({ chainId }: { chainId?: number } = {}) {
   const { data: client } = useConnectorClient<Config>({ chainId })
-  return useMemo(
-    () => (client ? clientToWeb3Provider(client) : undefined),
-    [client]
-  )
+  return useMemo(() => (client ? clientToWeb3Provider(client) : undefined), [client])
 }

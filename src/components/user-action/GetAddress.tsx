@@ -11,13 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "src/@/components/ui/card"
+import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
 import { useWrapToast } from "src/hooks/useWrapToast"
 import { debugError } from "src/utils/debug"
+import { useAccount } from "wagmi"
 
 import { LoadingSpinner } from "../LoadingSpinner"
 import { Result } from "../Result"
-import { useEthersWeb3Provider } from "src/hooks/useEthersWeb3Provider"
-import { useAccount } from "wagmi"
 
 export const GetAddress = () => {
   const { address } = useAccount()

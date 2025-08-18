@@ -21,5 +21,5 @@ export const UserAction = () => (
     <ApproveWron />
     <TransferWron />
     <AtiaActivation />
-    </>
+  </>
 )
