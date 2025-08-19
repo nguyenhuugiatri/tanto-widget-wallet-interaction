@@ -33,8 +33,8 @@ importers:
         specifier: 1.2.2
         version: 1.2.2(@types/react-dom@18.0.9)(@types/react@18.2.38)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@sky-mavis/tanto-widget':
-        specifier: file:sky-mavis-tanto-widget-v0.0.4-beta.20.tgz
-        version: file:sky-mavis-tanto-widget-v0.0.4-beta.20.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react-dom@18.0.9)(@types/react@18.2.38)(@wagmi/core@2.19.0(@tanstack/query-core@5.85.3)(@types/react@18.2.38)(react@18.2.0)(typescript@5.4.5)(use-sync-external-store@1.4.0(react@18.2.0))(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5)))(bufferutil@4.0.9)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(wagmi@2.16.3(@tanstack/query-core@5.85.3)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react@18.2.38)(bufferutil@4.0.9)(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(zod@4.0.5))
+        specifier: file:sky-mavis-tanto-widget-v0.0.4-beta.21.tgz
+        version: file:sky-mavis-tanto-widget-v0.0.4-beta.21.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react-dom@18.0.9)(@types/react@18.2.38)(@wagmi/core@2.19.0(@tanstack/query-core@5.85.3)(@types/react@18.2.38)(react@18.2.0)(typescript@5.4.5)(use-sync-external-store@1.4.0(react@18.2.0))(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5)))(bufferutil@4.0.9)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(wagmi@2.16.3(@tanstack/query-core@5.85.3)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react@18.2.38)(bufferutil@4.0.9)(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(zod@4.0.5))
       '@sky-mavis/waypoint':
         specifier: 4.2.0
         version: 4.2.0
@@ -1317,9 +1317,9 @@ packages:
       '@wagmi/core': ^2.x
       viem: ^2.x
 
-  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.4-beta.20.tgz':
-    resolution: {integrity: sha512-csLzl/I0dsA/aSbpGUXY48Itedinuz3ELkBh7tOZJOmbMtSbAGf9w00VnWkJyaTh9r6AVm96Dl25sSB6axodYw==, tarball: file:sky-mavis-tanto-widget-v0.0.4-beta.20.tgz}
-    version: 0.0.4-beta.20
+  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.4-beta.21.tgz':
+    resolution: {integrity: sha512-9ei/i4IvS+k11bN/UZIp2AD0XVypcLVK7X3r7jIv59iXkw+8TFSoiLoL5MRXZllB7UZFLECBVrTnE9OurHK59Q==, tarball: file:sky-mavis-tanto-widget-v0.0.4-beta.21.tgz}
+    version: 0.0.4-beta.21
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
       '@types/react': '>=18'
@@ -1605,6 +1605,7 @@ packages:
 
   '@walletconnect/modal@2.7.0':
     resolution: {integrity: sha512-RQVt58oJ+rwqnPcIvRFeMGKuXb9qkgSmwz4noF8JZGUym3gUAzVs+uW2NQ1Owm9XOJAV+sANrtJ+VoVq1ftElw==}
+    deprecated: Please follow the migration guide on https://docs.reown.com/appkit/upgrade/wcm
 
   '@walletconnect/relay-api@1.0.11':
     resolution: {integrity: sha512-tLPErkze/HmC9aCmdZOhtVmYZq1wKfWTJtygQHoWtgg722Jd4homo54Cs4ak2RUFUZIGO2RsOpIcWipaua5D5Q==}
@@ -6342,7 +6343,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.4-beta.20.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react-dom@18.0.9)(@types/react@18.2.38)(@wagmi/core@2.19.0(@tanstack/query-core@5.85.3)(@types/react@18.2.38)(react@18.2.0)(typescript@5.4.5)(use-sync-external-store@1.4.0(react@18.2.0))(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5)))(bufferutil@4.0.9)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(wagmi@2.16.3(@tanstack/query-core@5.85.3)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react@18.2.38)(bufferutil@4.0.9)(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(zod@4.0.5))':
+  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.4-beta.21.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react-dom@18.0.9)(@types/react@18.2.38)(@wagmi/core@2.19.0(@tanstack/query-core@5.85.3)(@types/react@18.2.38)(react@18.2.0)(typescript@5.4.5)(use-sync-external-store@1.4.0(react@18.2.0))(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5)))(bufferutil@4.0.9)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(wagmi@2.16.3(@tanstack/query-core@5.85.3)(@tanstack/react-query@5.85.3(react@18.2.0))(@types/react@18.2.38)(bufferutil@4.0.9)(react@18.2.0)(typescript@5.4.5)(utf-8-validate@5.0.10)(viem@2.33.3(bufferutil@4.0.9)(typescript@5.4.5)(utf-8-validate@5.0.10)(zod@4.0.5))(zod@4.0.5))':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.2.38)(react@18.2.0)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@18.2.38)(react@18.2.0))(@types/react@18.2.38)(react@18.2.0)
