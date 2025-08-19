@@ -12,6 +12,7 @@ interface IProviderProps {
 const queryClient = new QueryClient()
 
 const wagmiConfig = getDefaultConfig({
+  ssr: true,
   keylessWalletConfig: {
     clientId: "dbe1e3ff-e145-422f-84c4-e0beb4972f69",
     waypointOrigin: "https://id.skymavis.one",
