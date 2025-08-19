@@ -24,9 +24,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Toaster />
       </body>
     </html>
